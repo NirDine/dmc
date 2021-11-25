@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial=scale=1">
+    <title>Recursos - Drowned Man's Cove</title>
+    <!-- Así es como suelo dividir mi CSS. Lo más importante a notar es que me gusta mantener separados los colores de la estructuración para mayor accesibilidad a futuro y que hago lo mismo con el código que utilizo para alterar el aspecto en base a resolución -->
+      <script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+
+    <link rel="shortcut icon" type="image/png" href="/favicon.png"/>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/structure.css">
+    <link rel="stylesheet" id="theme_css" href="css/theme-colorful.css">
+    <link rel="stylesheet" href="css/fixer.css">
+    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+
+
+  </head>
+  <body>
+    <!-- Navegacion -->
+    <header class="mainHead">
+      <div class="navbar-container" role="navigation" aria-label="Menu principal">
+        <h2 class="visuallyhidden">Menu principal</h2>
+        <ul class="navbar floatL">
+            <a href="/" id="AboutLink"><li>Inicio</li></a>
+        <div class="dropdown">
+            <a href="/" class="dropper" id="GegorafiaLink"><li>Locaciones</li></a>
+        </div>
+          <div class="dropdown">
+            <a class="" href="rules.html"><li>Reglas</li></a>
+          </div>
+        <div class="dropdown">
+            <a href="resources.html" class="dropper"><li>Recursos</li></a>
+        </div>
+        <div class="dropdown">
+            <a class="dropper miniMenu"><li>Menu</li></a>
+            <div class="dropdown-content miniMenu">
+                <a href="/" class="dropped">Locaciones</a>
+                <a href="rules.html" class="dropped">Reglas</a>
+                <a href="resources.html" class="dropped">Recursos</a>            
+            </div>
+        </div>
+        </ul>
+        <span class="leng floatR"><a href="http://en.drownedmancove.martindavico.com" class="LanguageLongVersion floatR" aria-label="Cambio de lenguaje">Don't speak Spanish? Try the site in English instead!</a></span>
+        <span class="leng floatR"><a href="http://en.drownedmancove.martindavico.com" class="LanguageShortVersion miniMenu floatR" aria-label="Cambio de lenguaje">English?</a></span>
+      </div>
+    </header>
+    <section>
+        <!-- Contenido principal -->
+        <div class="content clearfix" role="main" >
+
+            <h1>Suplementos y recursos</h1>
+
+            <p>Aquí podrán encontrar suplementos de juego adicionales que se estarán utilizando a lo largo de la partida. Miembros de la partida tendrán acceso a los documentos de manera gratuita mediante el link de Drive.</p>
+            
+            <p>El objetivo de esta sección es el fácilitar a los jugadores el acceso a las reglas que vamos a estar usando, por lo tanto los documentos solo están disponibles para aquellos que estén actualmente jugando la partida. Por favor, no compartir los archivos sin perimso.</p>
+            
+            <br />
+            
+            <h2>gratuitos</h2>
+
+            <p>Nada aún</p>
+            
+            
+            <h2>pagos</h2>
+
+            <div class="source">
+            
+
+                    <h3><a href="https://www.dmsguild.com/product/265451/Treasures-of-the-Sea" target="_blank">Treasures of the Sea </a></h3>
+                    <a href="https://drive.google.com/file/d/1xskRdh5vItxTV8gJecVCFu4GNHhwkm8J/view" target="_blank" style="float:right;">[drive]</a>
+                
+            </div>
+                <p>Esta muy completa lista de objetos ofrece juguetes emocionantes y bien balanceados para que los jugadores usen y disfruten. Todos los objetos del complemento encajan muy bien con su temática y los recomiendo plenamente.</p>
+  
+            <div class="source">
+            
+
+                    <h3><a href="https://www.dmsguild.com/product/256983/Captains-and-Cannons-A-Ship-Combat-Guide-in-DD-5e" target="_blank">Captains and Cannons: A Ship Combat Guide</a></h3>
+                    <a href="https://drive.google.com/file/d/10sTk6tPuYnP42H-6BKPVRFaId60KCG9R" target="_blank" style="float:right;">[drive]</a>
+                
+            </div>
+                <p>Particularmente recomiendo estás reglas de navegación por ser simples en comparación con las alternativas. 5ta edición no cuenta con reglas detalladas para el uso y combate de barcos, por lo que estas reglas son útiles, sino necesarias.</p>
+  
+              <div class="source">
+            
+
+                    <h3><a href="https://shop.mcdmproductions.com/" target="_blank">Strongholds & Followers</a></h3>
+                    <a href="https://drive.google.com/open?id=1miBRAoyc_lGSFZB4qltFjJ6ofmraiHRI" target="_blank" style="float:right;">[drive]</a>
+                
+            </div>
+                <p>Las reglas de Strongholds & Followers son muchas y no estoy seguro de querer usarlas, pero confio en el criterio de Matthew Colville y me agrada la idea de plantear a una tripulación con estás reglas, de esa manera permitiendo más interacción de parte de los jugadores para con sus seguidores.</p>
+
+  
+  
+            
+            
+
+            
+            
+        </div>
+
+        <div id="completeMenu">
+            <div id="btnMenu">
+                <button onclick="topFunction()" id="myBtn"  class="myBtn" title="Regresar al tope">Back to top</button>
+
+                <button id="changeTheme" class="myBtn" title="Cambiar tema">Toggle eye candy</button> 
+
+            </div>
+            <button id="hideBtns" class="myBtn" title="Ocultar Botones"></button>
+        </div>
+        
+    </section>
+      
+    <div class="alert">
+        <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span> 
+        Lo siento, a&uacute;n estoy trabajando en esto.
+    </div>
+    <div id="particles-js"></div>
+
+
+<!-- Scripts -->
+        <script src="js/particles.js"></script>
+        <script src="js/apps.js"></script>
+
+
+        <script title="buttonMenu">
+        $(document).ready(function() {
+            var th1 = sessionStorage.getItem('key'),
+                bv1 = sessionStorage.getItem('btns');
+            
+            if(th1 == 0) {
+                document.getElementById('theme_css').href = 'css/theme.css';
+                $('#particles-js').css('display','none');
+            }
+            else if(th1 == 1) {
+                document.getElementById('theme_css').href = 'css/theme-colorful.css';
+                $('#particles-js').css('display','block');
+            }
+            else {}
+
+            if(bv1 == 0) {
+                $('#btnMenu').css('display', 'grid');
+                $('#hideBtns').css('width','246.12px')
+            }
+            else if(bv1 = 1){
+                $('#btnMenu').css('display', 'none');
+                $('#hideBtns').css('width','60px')
+            }
+            else {}
+        });
+        document.getElementById('changeTheme').onclick = function (chooseStyle) { 
+            var th = sessionStorage.getItem('key');
+            if(th == 0) {
+                document.getElementById('theme_css').href = 'css/theme-colorful.css';
+                sessionStorage.setItem('key', '1');
+                $('#particles-js').css('display','block');
+            }
+            else {
+                document.getElementById('theme_css').href = 'css/theme.css';
+                sessionStorage.setItem('key', '0');
+                $('#particles-js').css('display','none');
+            }  
+        };
+          
+          
+       document.getElementById('hideBtns').onclick = function () { 
+            var bv = sessionStorage.getItem('btns');
+            if(bv == 0) {
+              
+                 $('#btnMenu').slideUp(100)
+               $('#hideBtns').delay(110).animate({width: '60px' }, 100, 'linear');
+               sessionStorage.setItem('btns', '1'); 
+            }
+            else {
+               $('#hideBtns').animate({width:'246.12px' }, 100, 'linear');
+               $('#btnMenu').slideDown(200).css('display', 'grid');               
+                sessionStorage.setItem('btns', '0');
+                
+                }
+            };
+        window.onscroll = function() {scrollFunction()};
+            function scrollFunction() {
+                if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                    document.getElementById("myBtn").style.display = "block";
+                }
+                else {
+                    document.getElementById("myBtn").style.display = "none";
+                }
+            }
+
+        // When the user clicks on the button, scroll to the top of the document
+            function topFunction() {
+            document.body.scrollTop = 0;
+                document.documentElement.scrollTop = 0;
+            }
+          
+        </script>
+      
+      
+      
+        <script title="alertHandler">
+        $(function(){$('.alertLink').click(function(){$('.alert').css('display', 'inline-block').fadeOut(12000);});});
+        </script>
+<link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.0/cookieconsent.min.css" />
+<script src="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.0/cookieconsent.min.js"></script>
+<script>
+window.addEventListener("load", function(){
+window.cookieconsent.initialise({
+  "palette": {
+    "popup": {
+      "background": "rgb(0, 0, 0, 0.2);",
+      "text": "#b7babb"
+    },
+    "button": {
+      "background": "#0d7985",
+      "text": "#b7babb"
+    }
+  },
+  "theme": "classic",
+  "position": "bottom-left",
+  "content": {
+    "message": "Este sitio utiliza session storage para facilitar accesibilidad. Pero no te preocupes, solo guardamos unos y ceros.",
+    "dismiss": "De acuerdo, largo"
+  }
+})});
+</script>
+    </body>
+</html>

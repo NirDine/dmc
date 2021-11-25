@@ -1,0 +1,103 @@
+body {
+  background-color: #f2f3f4;
+  color: #373737;
+  font: 15px "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 300;
+  line-height: 1.625;
+}
+
+header.mainHead, .myBtn {
+  background: #373737;
+  color: #b7babb;
+  font-weight: 300;
+  line-height: 1.625;
+  border-color:#373737;
+}
+header.mainHead a {
+  color: #b7babb;
+  line-height: 1em;
+  text-decoration: none;
+  font-weight: normal;
+  font-weight: 500;
+}
+  header.mainHead a:hover, header.mainHead a:focus,  .myBtn:hover,  .myBtn:focus {
+    color: #fff;
+    background: #505050;
+    border-color: #fff;  border-top: 2px solid transparent;
+  }
+  .dropdown-content {
+    background-color: #373737;
+  }
+  section {
+    font-family: 'Raleway', sans-serif;
+  }
+  div.content, div.sidebar {
+    border-color: #e3e3e3;
+    background: #fff;
+  }
+  h1	{
+    color: #666;
+    text-transform: uppercase;
+    font-size: 22px;
+    font-family: "Montserrat script=all rev=1";
+    font-weight: bold;
+  }
+  h2 {
+    color: #777;    
+    text-transform: uppercase;
+    font-size: 18px;
+    font-family: "Montserrat script=all rev=1";
+    font-weight: bold;
+    text-decoration: underline;
+  }
+h3 {
+    color: #373737;    
+    text-transform: uppercase;
+    font-size: 12px;
+    font-family: "Montserrat script=all rev=1";
+    font-weight: bold;
+    text-decoration: none;
+}
+hr {
+    margin: 30px 0;
+    border-top: #101010 1px solid;
+    border-bottom: #222 1px solid;
+}
+
+    path {cursor: pointer;stroke: #c3c3c3;}
+    path#RocksEasyClick {stroke:transparent;}
+/* Overflow style */
+
+::-webkit-scrollbar {width: 5px;}
+::-webkit-scrollbar-track {background: transparent;}
+::-webkit-scrollbar-thumb {background: #373737; border-radius: 10px;}
+::-webkit-scrollbar-thumb:hover {background: #666;}
+
+
+/* The alert message box */
+.alert {
+  background-color: #f44336; /* Red */
+  color: white;
+}
+
+/* The close button */
+.closebtn {
+ color: white;
+ font-weight: bold;
+}
+
+/* When moving the mouse over the close button */
+.closebtn:hover {
+  color: black;
+}
+
+.particles-js{display: none;}
+
+.cc-color-override--1210617367.cc-window  {
+background-color: #373737 !important;
+}
+
+.cc-window a.cc-btn {
+    background: #b7babb !important;
+    color: #373737 !important;
+}

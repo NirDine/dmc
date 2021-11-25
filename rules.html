@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial=scale=1">
+    <title>Drowned Man's Cove</title>
+    <!-- Así es como suelo dividir mi CSS. Lo más importante a notar es que me gusta mantener separados los colores de la estructuración para mayor accesibilidad a futuro y que hago lo mismo con el código que utilizo para alterar el aspecto en base a resolución -->
+    <script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+
+    <link rel="shortcut icon" type="image/png" href="/favicon.png"/>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/structure.css">
+    <link rel="stylesheet" id="theme_css" href="css/theme-colorful.css">
+    <link rel="stylesheet" href="css/fixer.css">
+    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+
+
+  </head>
+  <body>
+    <!-- Navegacion -->
+    <header class="mainHead">
+      <div class="navbar-container" role="navigation" aria-label="Menu principal">
+        <h2 class="visuallyhidden">Menu principal</h2>
+        <ul class="navbar floatL">
+            <a href="/" id="AboutLink"><li>Inicio</li></a>
+        <div class="dropdown">
+            <a class="dropper" href="/" id="GegorafiaLink"><li>Locaciones</li></a>
+        </div>
+          <div class="dropdown">
+            <a href="rules.html" class=""><li>Reglas</li></a>
+            </div>
+        <div class="dropdown">
+            <a href="resources.html" class="dropper"><li>Recursos</li></a>
+        </div>
+        <div class="dropdown">
+            <a class="dropper miniMenu"><li>Menu</li></a>
+            <div class="dropdown-content miniMenu">
+                <a href="/" class="dropped">Locaciones</a>
+                <a href="rules.html" class="dropped">Reglas</a>
+                <a href="resources.html" class="dropped">Recursos</a>            
+            </div>
+        </div>
+        </ul>
+        <span class="leng floatR"><a href="http://en.drownedmancove.martindavico.com" class="LanguageLongVersion floatR" aria-label="Cambio de lenguaje">Don't speak Spanish? Try the site in English instead!</a></span>
+        <span class="leng floatR"><a href="http://en.drownedmancove.martindavico.com" class="LanguageShortVersion miniMenu floatR" aria-label="Cambio de lenguaje">English?</a></span>
+      </div>
+    </header>
+    <section>
+      <!-- Contenido lateral -->
+        <!-- Contenido principal -->
+        <div class="content clearfix" role="main" >
+            <div class="main-info">
+
+            <h1>Reglas de juego</h1>
+
+            <p>Aquí podrán encontrar reglas tanto oficiales como suplementarias que se estarán utilizando a lo largo de la partida. Cambios subsecuentes a las reglas serán también añadidos en tanto vayan surgiendo.</p>
+            
+            <p>	El espíritu de este segmento no es más que el de facilitar a los jugadores el acceso a esta información, en cualquier caso en el que el Dungeon Master (DM) considere que las reglas aquí presentes deberían ser ignorados en favor a otra interpretación, podrá de hacerlo. Mas esto tampoco quiere decir que las reglas han de ser ignoradas (por jugadores o DM) sin lugar a razón.</p>
+                
+            </div>
+    
+                <iframe id="info" name="mainInfo" src="rules/underwater.html" frameborder="0"></iframe>
+        </div>
+        
+        
+        <div class="sidebar" id="sidebar" role="complementary navegation">
+            <iframe src="rules/menu.html" id="sidebarContent" name="sidebarInfo" frameborder="0"></iframe>
+        </div>
+        
+
+        
+        
+        <div id="completeMenu">
+            <div id="btnMenu">
+                <button onclick="topFunction()" id="myBtn"  class="myBtn" title="Regresar al tope">Back to top</button>
+                <button id="disableSidebar" class="myBtn" title="Desactivar menu lateral">Toggle infobar visibility</button> 
+                <button onclick="stopFollow()" id="stopFollowing" class="myBtn" title="Detener menu lateral">Toggle infobar movement</button> 
+                <button id="changeTheme" class="myBtn" title="Cambiar tema">Toggle eye candy</button> 
+
+            </div>
+            <button id="hideBtns" class="myBtn" title="Ocultar Botones"></button>
+        </div>
+        
+    </section>
+      
+    <div class="alert">
+        <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span> 
+        Lo siento, a&uacute;n estoy trabajando en esto.
+    </div>
+    <div id="particles-js"></div>
+
+
+<!-- Scripts -->
+        <script src="js/particles.js"></script>
+        <script src="js/apps.js"></script>
+        <script src="js/snap.svg-min.js"></script>
+        <script type="text/javascript" title="accesibilty feature">
+            window.onload=function(){
+            $('.dropped').focus(function() {
+                $(this).parent().addClass('inUse');
+            }).blur(function() {
+                $(this).parent().removeClass('inUse');
+            });
+            }
+        </script>
+
+        <script title="buttonMenu">
+        $(document).ready(function() {
+            var th1 = sessionStorage.getItem('key'),
+                sv1 = sessionStorage.getItem('side'),
+                bv1 = sessionStorage.getItem('btns');
+            
+            if(th1 == 0) {
+                document.getElementById('theme_css').href = 'css/theme.css';
+                $('#particles-js').css('display','none');
+            }
+            else if(th1 == 1) {
+                document.getElementById('theme_css').href = 'css/theme-colorful.css';
+                $('#particles-js').css('display','block');
+            }
+            else {}
+            if(sv1 == 0) {
+                $('.sidebar').css('display', 'none');
+                $('.content').css('width','-webkit-fill-available');
+
+            }
+            else if (sv1 == 1) {
+                $('.sidebar').css('display', 'block');
+                $('.content').css('width','');
+
+            }
+            else {}
+            if(bv1 == 0) {
+                $('#btnMenu').css('display', 'grid');
+                $('#hideBtns').css('width','246.12px')
+            }
+            else if(bv1 = 1){
+                $('#btnMenu').css('display', 'none');
+                $('#hideBtns').css('width','60px')
+            }
+            else {}
+        });
+        document.getElementById('changeTheme').onclick = function (chooseStyle) { 
+            var th = sessionStorage.getItem('key');
+            if(th == 0) {
+                document.getElementById('theme_css').href = 'css/theme-colorful.css';
+                sessionStorage.setItem('key', '1');
+                $('#particles-js').css('display','block');
+            }
+            else {
+                document.getElementById('theme_css').href = 'css/theme.css';
+                sessionStorage.setItem('key', '0');
+                $('#particles-js').css('display','none');
+            }  
+        };
+          
+        document.getElementById('disableSidebar').onclick = function () { 
+            var sv = sessionStorage.getItem('side');
+            if(sv == 0) {
+                 $('.sidebar').css('display', 'block');
+                sessionStorage.setItem('side', '1');
+
+            }
+            else {
+                $('.sidebar').css('display', 'none');
+                sessionStorage.setItem('side', '0');
+         
+            }
+        };
+          
+       document.getElementById('hideBtns').onclick = function () { 
+            var bv = sessionStorage.getItem('btns');
+            if(bv == 0) {
+              
+                 $('#btnMenu').slideUp(100)
+               $('#hideBtns').delay(110).animate({width: '60px' }, 100, 'linear');
+               sessionStorage.setItem('btns', '1'); 
+            }
+            else {
+               $('#hideBtns').animate({width:'246.12px' }, 100, 'linear');
+               $('#btnMenu').slideDown(200).css('display', 'grid');               
+                sessionStorage.setItem('btns', '0');
+                
+                }
+            };
+        window.onscroll = function() {scrollFunction()};
+            function scrollFunction() {
+                if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                    document.getElementById("myBtn").style.display = "block";
+                }
+                else {
+                    document.getElementById("myBtn").style.display = "none";
+                }
+            }
+
+        // When the user clicks on the button, scroll to the top of the document
+            function topFunction() {
+            document.body.scrollTop = 0;
+                document.documentElement.scrollTop = 0;
+            }
+          
+        </script>
+        <script title="sidebarBehavior">
+    
+        $(function() {
+            var $sidebar   = $(".sidebar"), 
+                $window    = $(window),
+                offset     = $sidebar.offset(),
+                topPadding = 6,
+                sm = sessionStorage.getItem('sideMove'),
+                turnOff = sm;
+
+            document.getElementById('stopFollowing').onclick = function ( stopFollow ) { 
+                sm = sessionStorage.getItem('sideMove');
+                if(sm == 0 ) {
+                    sessionStorage.setItem('sideMove', '1');
+                    turnOff =1;
+                    $sidebar.stop().animate({
+                        marginTop: 0
+                    }, 200, 'linear');
+
+                }
+                else {
+                   sessionStorage.setItem('sideMove', '0');
+                   turnOff=0;
+                }
+            }
+            $window.scroll(function() {
+                if (turnOff == 0) {
+                    if($window.scrollTop() > offset.top) {
+                        $sidebar.stop().animate({
+                        marginTop: $window.scrollTop() - offset.top + topPadding,
+
+                        }, 0, 'linear');
+                    } 
+                    else {
+                        $sidebar.stop().animate({
+                            marginTop: 0
+                        }, 0, 'linear');
+                    }
+                }
+                else {}
+            });
+        
+        });
+            
+        </script>
+        <script title="alertHandler">
+        $(function(){$('.alertLink').click(function(){$('.alert').css('display', 'inline-block').fadeOut(12000);});});
+        
+        </script>
+      
+<link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.0/cookieconsent.min.css" />
+<script src="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.0/cookieconsent.min.js"></script>
+<script>
+window.addEventListener("load", function(){
+window.cookieconsent.initialise({
+  "palette": {
+    "popup": {
+      "background": "rgb(0, 0, 0, 0.2);",
+      "text": "#b7babb"
+    },
+    "button": {
+      "background": "#0d7985",
+      "text": "#b7babb"
+    }
+  },
+  "theme": "classic",
+  "position": "bottom-left",
+  "content": {
+    "message": "Este sitio utiliza session storage para facilitar accesibilidad. Pero no te preocupes, solo guardamos unos y ceros.",
+    "dismiss": "De acuerdo, largo"
+  }
+})});
+</script>
+    </body>
+</html>

@@ -1,0 +1,103 @@
+body{  
+    color: #373737;
+    font-size: 15px;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 300;
+    line-height: 1.3;
+    cursor: default;
+}
+
+
+/* SCROLL STYLE */
+/* width */
+::-webkit-scrollbar {
+  width: 5px;
+
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: transparent; 
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #373737; 
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #666; 
+}
+::-webkit-scrollbar-track-piece:start {
+   /* Select the top half (or left half) or scrollbar track individually */
+    background: #f3f0f9;
+    border-radius: 10px;
+}
+
+
+h1, .title {
+    border-left: 10px solid;
+    padding-left:10px;
+    border-top-left-radius: 2px;
+    border-bottom-left-radius: 2px;
+}
+h2{
+    margin:0px;
+    text-align: center;
+}
+
+hr {
+    border: 1px solid rgba(0, 0, 0, 0.2)
+    border-radius: 15px;
+        width: 70%;
+}
+
+ul {
+  list-style: none;
+  padding: 0px;
+
+}
+
+.characterInfo p {margin:10px;}
+.characterInfo p:last-child {margin:50px;}
+.classification {font-weight: 700; float: left; position: relative; left: 0px;}
+.data {float: right; position: relative;}
+ul li:first-child {border-top-left-radius: 5px}
+ul li:last-child {border-bottom-left-radius: 5px}
+.personImage {
+        height: 180px;
+        background-image:url(../assets/person-outline.png);
+    background-repeat: no-repeat;
+    background-size: 180px;
+    background-position:center;
+}
+
+a, .display {
+    color: #8f5f0f;
+}
+
+.non-active {    color: #373737;}
+
+
+p {margin:10px;}
+p:last-child {margin-bottom:50px;}
+
+.source {display: flex}
+.source a {
+ 
+    padding-top: 18px;
+    text-transform: uppercase;
+    font-size: 12px;
+    font-family: "Montserrat script=all rev=1";
+    font-weight: bold;
+    text-decoration: none;
+    margin-left: auto;
+}
+h3 {font-size: 15px;}
+
+h1, h2, h3 {
+  font-family: "Montserrat script=all rev=1";
+  text-transform: uppercase;
+}
